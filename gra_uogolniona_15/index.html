@@ -1,0 +1,42 @@
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/skrypty.js" defer></script>
+    <title>Gra „moja-15” Stefaniuk</title>
+</head>
+<body onload="initGameXY()">
+    <header>
+        <h1>Stefaniuk – Gra „uogólniona 15”</h1>
+    </header>
+
+    <section id="gra">
+        <label for="bokY">Bok Y:</label>
+        <select id="bokY" class="custom-select">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </select>
+        <label for="bokX">Bok X:</label>
+        <select id="bokX" class="custom-select">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </select>
+        <button onclick="startGameXY()">Nowa gra</button>
+        <br><br>
+
+        <p>Ilość ruchów: <span id="current">0</span></p>
+        <p>Czas gry: <span id="time">0</span> sekund</p>
+        <p style="margin-bottom: 20px;">Wynik gry: <span id="wynik"></span> <span id="bingo"></span></p>
+        
+        <table id="plansza"></table>
+    </section>
+
+    <section id="licznikiTabela" style="margin-top: 20px;">
+        <button onclick="resetCounter()">Zresetuj licznik ruchów</button>
+    </section>
+</body>
+</html>
