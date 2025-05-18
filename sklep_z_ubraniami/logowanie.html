@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css3.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UbierzemyCie - Logowanie</title>
+</head>
+<body>
+
+    <header>
+        <h1>UbierzemyCie</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Strona główna</a>
+        <a href="produkty.html">Produkty</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="zakup.html">Zakup</a>
+        <a href="logowanie.html">Logowanie</a>
+    </nav>
+
+    <main>
+        <div class="login-form">
+            <h2>Logowanie</h2>
+            <form id="loginForm">
+                <label for="username">Nazwa użytkownika:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Hasło:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="button" onclick="login()">Zaloguj</button>
+            </form>
+        </div>
+
+        <div class="welcome-message" id="welcomeMessage" style="display: none;">
+            Witaj, <span id="usernameDisplay"></span>!
+        </div>
+    </main>
+
+    <script>
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;    
+            if (username.trim() === "" || password.trim() === "") {
+                alert("Proszę wprowadzić nazwę użytkownika i hasło.");
+                return;
+            }
+            document.getElementById("welcomeMessage").style.display = "block";
+            document.getElementById("usernameDisplay").innerText = username;
+            document.getElementById("loginForm").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>

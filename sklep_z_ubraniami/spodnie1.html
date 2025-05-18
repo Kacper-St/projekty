@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UbierzemyCie - Produkt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        main {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .product-details {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .product-details img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+
+        .product-details-info {
+            flex-grow: 1;
+            box-sizing: border-box;
+        }
+
+        .product-details h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .product-details p {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .product-details select {
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .product-details button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .product-details button:hover {
+            background-color: #555;
+        }
+
+        .cart-item {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-item select {
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>UbierzemyCie</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Strona główna</a>
+        <a href="produkty.html">Produkty</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="zakup.html">Zakup</a>
+        <a href="logowanie.html">Logowanie</a>
+    </nav>
+
+    <main>
+        <div class="product-details">
+            <img src="spodnie1.jpg" alt="Spodnie DSQUARED2">
+            <div class="product-details-info">
+                <h2>Spodnie DSQUARED2</h2>
+                <p>Cena: $250</p>
+                <p>Materiał: Wysokiej jakości bawełna</p>
+                <p>Sklad: 100% bawełna</p>
+                <label for="size">Wybierz rozmiar:</label>
+                <select id="size">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L" selected>L</option>
+                    <option value="XL">XL</option>
+                </select>
+                <button onclick="addToCart('Spodnie DSQUARED2', 'Spodnie DSQUARED2', 250, 'L')">Dodaj do koszyka</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function addToCart(id, name, price, size) {
+            var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            var selectedSize = document.getElementById('size').value;
+            cartItems.push({ id, name, price, size: selectedSize });
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            alert('Dodano do koszyka!');
+        }
+    </script>
+
+</body>
+
+</html>

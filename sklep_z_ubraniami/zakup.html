@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css1.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UbierzemyCie - Koszyk</title>
+</head>
+<body>
+
+    <header>
+        <h1>UbierzemyCie</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Strona główna</a>
+        <a href="produkty.html">Produkty</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="zakup.html">Zakup</a>
+        <a href="logowanie.html">Logowanie</a>
+    </nav>
+
+    <main>
+        <div class="cart" id="cart">
+            <h2>Twój Koszyk</h2>
+            <ul id="cartItems"></ul>
+            <p id="total">Suma: $0</p>
+            <button id="clearButton" onclick="clearCart()">Wyczyść</button>
+            <button id="checkoutButton" onclick="checkout()">Zakup</button>
+        </div>
+    </main>
+
+    <script>
+        function updateCart() {
+            let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            let cartElement = document.getElementById('cartItems');
+            let totalElement = document.getElementById('total');
+            cartElement.innerHTML = '';
+            let total = 0;
+
+            cartItems.forEach(item => {
+                let li = document.createElement('li');
+                li.textContent = `${item.name} - Rozmiar: ${item.size} - $${item.price}`;
+                cartElement.appendChild(li);
+                total += item.price;
+            });
+
+            totalElement.textContent = `Suma: $${total}`;
+        }
+
+        function clearCart() {
+            localStorage.removeItem('cartItems');
+            updateCart();
+        }
+
+        function checkout() {
+            alert('Dziękujemy za zakup!');
+            localStorage.removeItem('cartItems');
+            updateCart();
+        }
+
+        updateCart();
+    </script>
+
+</body>
+
+</html>

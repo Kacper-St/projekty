@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UbierzemyCie - Produkty</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        nav .dropdown {
+            display: inline-block;
+            position: relative;
+        }
+
+        nav .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            text-align: left;
+            border-top: 2px solid #fff;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+
+        nav .dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        nav .dropdown-content a {
+            color: #fff;
+            padding: 12px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        nav .dropdown-content a:hover {
+            background-color: #555;
+        }
+
+        main {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .product {
+            width: calc(33.33% - 20px);
+            box-sizing: border-box;
+            margin: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            transition: box-shadow 0.3s ease;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .product:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .product img:hover {
+            transform: scale(1.05);
+        }
+
+        .product h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .product p {
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+
+        .product button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .product button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>UbierzemyCie</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Strona główna</a>
+        <div class="dropdown">
+            <a href="#">Produkty</a>
+            <div class="dropdown-content">
+                <a href="#" onclick="showCategory('all')">Wszystkie</a>
+                <a href="#" onclick="showCategory('bluzy')">Bluzy</a>
+                <a href="#" onclick="showCategory('spodnie')">Spodnie</a>
+                <a href="#" onclick="showCategory('bluzeczki')">T-shirty</a>
+            </div>
+        </div>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="zakup.html">Zakup</a>
+        <a href="logowanie.html">Logowanie</a>
+    </nav>
+
+    <main>
+        <div class="product" id="product1" data-category="bluzy" onclick="redirectToProduct('bluza1.html')">
+            <img src="bluza1.jpg" alt="Yeezy Gap x Balenciaga Dove Hoodie Black">
+            <h3>Yeezy Gap x Balenciaga Dove Hoodie Black</h3>
+            <p>Cena: $400</p>
+            <p>Bluza kolaboracji marki Yeezy rapera Kanyego Westa z Gap</p>
+            <button onclick="redirectToProduct('bluza1.html')">Przejdz do Strony Produktu</button>
+        </div>
+
+        <div class="product" id="product2" data-category="bluzy" onclick="redirectToProduct('bluza2.html')">
+            <img src="bluza2.jpg" alt="Travis Scott x Jordan Hoodie Green">
+            <h3>Travis Scott x Jordan Hoodie Green</h3>
+            <p>Cena: $450</p>	
+            <p>Bluza kolaboracji Travisa Scotta z Jordanem</p>
+            <button onclick="redirectToProduct('bluza2.html')">Przejdz do Strony Produktu</button>
+        </div>
+
+        <div class="product" id="product3" data-category="bluzy" onclick="redirectToProduct('bluza3.html')">
+            <img src="bluza3.jpg" alt="Murakami x Hamilton Mind Wrap Hoodie">
+            <h3>Murakami x Hamilton Mind Wrap Hoodie</h3>
+            <p>Cena: $300</p>
+            <p>Bluza kolaboracji marki Murakami z Hamilton</p>
+            <button onclick="redirectToProduct('bluza3.html')">Przejdz do Strony Produktu</button>
+        </div>
+
+        <div class="product" id="product2" data-category="spodnie" onclick="redirectToProduct('spodnie1.html')">
+            <img src="spodnie1.jpg" alt="DSQUARED2">
+            <h3>Spodnie DSQUARED2</h3>
+            <p>Cena: $250</p>
+            <p>Spodnie kanadyjskich projektantów Dean i Dan Caten</p>
+            <button onclick="redirectToProduct('spodnie1.html')">Przejdz do Strony Produktu</button>
+        </div>
+
+        <div class="product" id="product2" data-category="spodnie" onclick="redirectToProduct('spodnie2.html')">
+            <img src="spodnie2.jpg" alt="Moncler Genius">
+            <h3>Moncler Genius</h3>
+            <p>Cena: $350</p>
+            <p>Spodnie marki Moncler zaprojektowane przez JAY-Z</p>
+            <button onclick="redirectToProduct('spodnie2.html')">Przejdz do Strony Produktu</button>
+        </div>
+
+        <div class="product" id="product2" data-category="spodnie" onclick="redirectToProduct('spodnie3.html')">
+            <img src="spodnie3.jpg" alt="VIVIENNE WESTWOOD">
+            <h3>VIVIENNE WESTWOOD</h3>
+            <p>Cena: $400</p>
+            <p>Spodnie brytyjskiej projektantki mody Vivienne Westwood </p>
+            <button onclick="redirectToProduct('spodnie3.html')">Przejdz do Strony Produktu</button>
+        </div>
+
+        <div class="product" id="product3" data-category="bluzeczki" onclick="redirectToProduct('bluzeczka1.html')">
+            <img src="bluzeczka1.jpg" alt="YEEZY X GAP">
+            <h3>YEEZY X GAP</h3>
+            <p>Cena: $100</p>
+            <p>T-shirt kolaboracji rapera Kanye West z marka Gap</p>
+            <button onclick="redirectToProduct('bluzeczka1.html')">Przejdz do Strony Produktu</button>
+        </div>
+
+        <div class="product" id="product3" data-category="bluzeczki" onclick="redirectToProduct('bluzeczka2.html')">
+            <img src="bluzeczka2.jpg" alt="BAPE College Tee">
+            <h3>BAPE College Tee</h3>
+            <p>Cena: $100</p>
+            <p>T-shirt japońskiego projektanta Hiroshi Fujiwara</p>
+            <button onclick="redirectToProduct('bluzeczka2.html')">Przejdz do Strony Produktu</button>
+        </div>
+
+        <div class="product" id="product3" data-category="bluzeczki" onclick="redirectToProduct('bluzeczka3.html')">
+            <img src="bluzeczka3.jpg" alt="Fear of God Essentials">
+            <h3>Fear of God Essentials</h3>
+            <p>Cena: $70</p>
+            <p>T-shirt Amerykańskiej marki Fear of God</p>
+            <button onclick="redirectToProduct('bluzeczka3.html')">Przejdz do Strony Produktu</button>
+        </div>
+
+    </main>
+
+    <script>
+        function showCategory(category) {
+            var products = document.querySelectorAll('.product');
+            products.forEach(function (product) {
+                if (product.getAttribute('data-category') === category || category === 'all') {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+
+        function addToCart(id, name, price) {
+            var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            cartItems.push({ id, name, price });
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            alert('Dodano do koszyka!');
+        }
+
+        function redirectToProduct(productPage) {
+            window.location.href = productPage;
+        }
+    </script>
+
+</body>
+
+</html>
