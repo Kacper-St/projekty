@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produkty - Sklep Internetowy</title>
+    <link rel="stylesheet" href="css1.css">
+</head>
+<body>
+
+    <header>
+        <h1>Produkty</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Strona główna</a>
+        <a href="produkty.html">Produkty</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="koszyk.html">Koszyk</a>
+        <a href="login.html">Zaloguj się</a>
+        <a href="opinie.html">Opinie</a>
+    </nav>
+
+    <section>
+        <h2>Nasze Produkty</h2>
+        <div class="recommended-products">
+
+            <div class="product" id="product1">
+
+                <h3>Dior Sauvage Elixir</h3>
+		<fieldset id="obraz">
+			<img src="produkt1.jpg">
+                
+                <p>Głowa -	grejpfrut, cynamon, gałka muszkatołowa, kardamon</p>
+                <p>Serce -	lawenda, kumaryna, wanilia</p>
+                <p>Podstawa -	bursztyn, lukrecja, haitański wetiwer, paczuli</p>
+                <p>Grupy zapachów -	przyprawowe, drzewne</p> 
+                <button class="buy-btn" onclick="addToCart('Dior Sauvage Elixir', 800)">Dodaj do koszyka</button> 800zl
+            </div>
+
+            <div class="product" id="product2">
+
+                <h3>Stronger with You</h3>
+		<fieldset id="obraz">
+			<img src="produkt2.jpg">
+               
+                <p>Głowa -	kardamon, różowy pieprz, liście fiołka, mięta</p>
+                <p> Serce -	szałwia, melon, ananas</p>
+                <p> Podstawa -	wanilia, kasztanowiec, cedr, ambra</p>
+                <p> Grupy zapachów -	aromatyczne</p>
+                <button class="buy-btn" onclick="addToCart('Stronger with You', 360)">Dodaj do koszyka</button> 360zl
+            </div>
+
+            <div class="product" id="product3">
+
+                <h3>SpiceBomb</h3>
+		<fieldset id="obraz">
+			<img src="produkt3.jpg">
+               
+                <p>Złożenie - 	kminek, tytoń, wanilia</p>
+                <p>Grupy zapachów -	orientalne, przyprawowe</p>
+                <button class="buy-btn" onclick="addToCart('SpiceBomb', 400)">Dodaj do koszyka</button> 400zl
+            </div>
+
+  	    <div class="product"id="product4">
+
+                <h3>Jean Paul Gaultier</h3>
+		<fieldset id="obraz">
+			<img src="produkt4.jpg">
+                
+                <p>Głowa -	kardamon</p>
+                <p>Serce -	lawenda, irys</p>
+                <p>Podstawa - 	wanilia</p>
+                <p>Grupy zapachów -	orientalne, drzewne</p>
+                <button class="buy-btn" onclick="addToCart('Jean Paul Gaultier', 500)">Dodaj do koszyka</button> 500zl
+            </div>
+
+            <div class="product" id="product5">
+
+                <h3>Hugo Boss Bottled</h3>
+		<fieldset id="obraz">
+			<img src="produkt5.jpg">
+                
+                <p>Głowa -	jabłko</p>
+                <p>Serce -	cynamon, geranium</p>
+                <p>Podstawa -	nuty drzew</p>
+                <p>Grupy zapachów -	przyprawowe, drzewne</p>
+                <button class="buy-btn" onclick="addToCart('Hugo Boss Bottled', 225)">Dodaj do koszyka</button> 225zl
+            </div>
+
+            <div class="product" id="product6">
+
+                <h3>Dior Homme Intense</h3>
+		<fieldset id="obraz">
+			<img src="produkt6.jpg">
+            
+                <p>Głowa -	irys</p>
+                <p>Serce -	Ambrette (ślaz piżmowy)</p>
+                <p>Podstawa -	jałowiec wirginijski</p>
+                <p>Grupy zapachów -	kwiatowe, drzewne</p>
+                <button class="buy-btn" onclick="addToCart('Dior Homme Intense', 375)">Dodaj do koszyka</button> 375zl
+            </div>
+
+            <div class="product" id="product7">
+            <h3>Velentino Born in Roma</h3>
+		<fieldset id="obraz">
+			<img src="produkt7.jpg">
+               
+                <p>Głowa - irys</p>
+                <p> Serce -	szałwia, melon, ananas</p>
+                <p> Podstawa -	wanilia, kasztanowiec, cedr, ambra</p>
+                <p> Grupy zapachów -	aromatyczne</p>
+                <button class="buy-btn" onclick="addToCart('Valentino Born in Roma', 529)">Dodaj do koszyka</button> 529zl
+            </div>
+
+            <div class="product" id="product8">
+            <h3>Versace Eros</h3>
+		<fieldset id="obraz">
+			<img src="produkt8.jpg">
+                
+                <p>Głowa -	kardamon, różowy pieprz, liście fiołka, mięta</p>
+                <p> Serce -	szałwia, melon, ananas</p>
+                <p> Podstawa -	wanilia, kasztanowiec, cedr, ambra</p>
+                <p> Grupy zapachów -	aromatyczne</p>
+                <button class="buy-btn" onclick="addToCart('Versace Eros', 715)">Dodaj do koszyka</button> 715zl
+            </div>
+
+            <div class="product" id="product9">
+            <h3>Rabbane Phantom</h3>
+		<fieldset id="obraz">
+			<img src="produkt9.jpg">
+                
+                <p>Głowa -	kardamon, różowy pieprz, liście fiołka, mięta</p>
+                <p> Serce -	szałwia, melon, ananas</p>
+                <p> Podstawa -	wanilia, kasztanowiec, cedr, ambra</p>
+                <p> Grupy zapachów -	aromatyczne</p>
+                <button class="buy-btn" onclick="addToCart('Rabbane Phantom', 585)">Dodaj do koszyka</button> 585zl
+            </div>
+
+        </div>
+    </section>
+
+    <script src="baza.js"></script>
+
+
+</body>
+</html>

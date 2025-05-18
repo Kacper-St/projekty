@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logowanie - Sklep Internetowy</title>
+    <link rel="stylesheet" href="css4.css">
+</head>
+    <nav>
+        <a href="index.html">Strona główna</a>
+        <a href="produkty.html">Produkty</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="koszyk.html">Koszyk</a>
+        <a href="login.html">Zaloguj się</a>
+        <a href="opinie.html">Opinie</a>
+    </nav>
+<body>
+    <div id="login-container">
+        <h2>Zaloguj się</h2>
+        <input type="text" id="username" placeholder="Nazwa użytkownika">
+        <input type="password" id="password" placeholder="Hasło">
+        <button id="login-button" onclick="login()">Zaloguj się</button>
+        <p id="welcome-message"></p>
+    </div>
+
+    <script>
+        function login() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            
+            if (username === 'test' && password === 'password') {
+                document.getElementById('login-container').style.display = 'none';
+                document.getElementById('welcome-message').innerText = 'Witaj, ' + username + '!';
+                document.getElementById('welcome-message').style.display = 'block';
+            } else {
+                alert('Błędne dane logowania. Spróbuj ponownie.');
+            }
+        }
+    </script>
+</body>
+</html>

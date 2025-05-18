@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona Główna</title>
+    <link rel="stylesheet" href="css2.css">
+</head>
+<body>
+
+    <header>
+        <h1>Strona Główna</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Strona główna</a>
+        <a href="produkty.html">Produkty</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="koszyk.html">Koszyk</a>
+        <a href="login.html">Zaloguj się</a>
+        <a href="opinie.html">Opinie</a>
+    </nav>
+
+    <section>
+        <h2>Witaj w naszym sklepie internetowym!</h2>
+        <p>Przejrzyj naszą ofertę i złoż zamówienie.</p>
+        <p>U nas kupisz oryginalne perfumy dla mężczyzn w najniższej cenie dostępnej na rynku!</p>
+
+        <h2>Proponowane Produkty</h2>
+        <div class="recommended-products">
+
+            <div class="product">
+                <h3>Dior Sauvage Elixir</h3>
+		<fieldset id="obraz">
+			<img src="produkt1.jpg">
+            <p>Głowa -	grejpfrut, cynamon, gałka muszkatołowa, kardamon</p>
+            <p>Serce -	lawenda, kumaryna, wanilia</p>
+            <p>Podstawa -	bursztyn, lukrecja, haitański wetiwer, paczuli</p>
+            <p>Grupy zapachów -	przyprawowe, drzewne</p> 
+                <button class="buy-btn" onclick="addToCart('Dior Sauvage Elixir', 800)">Dodaj do koszyka</button> 800zl
+            </div>
+
+            <div class="product">
+                <h3>SpiceBomb</h3>
+		<fieldset id="obraz">
+			<img src="produkt3.jpg">
+            <p>Złożenie - 	kminek, tytoń, wanilia</p>
+            <p>Grupy zapachów -	orientalne, przyprawowe</p>
+                <button class="buy-btn" onclick="addToCart('SpiceBomb', 400)">Dodaj do koszyka</button> 400zl
+            </div>
+
+	    <div class="product">
+                <h3>Dior Homme Intense</h3>
+		<fieldset id="obraz">
+			<img src="produkt6.jpg">
+            <p>Głowa -	irys</p>
+            <p>Serce -	Ambrette (ślaz piżmowy)</p>
+            <p>Podstawa -	jałowiec wirginijski</p>
+            <p>Grupy zapachów -	kwiatowe, drzewne</p>
+                <button class="buy-btn" onclick="addToCart('Dior Homme Intense', 375)">Dodaj do koszyka</button> 375zl
+            </div>
+                <script src="baza.js"></script>
+
+            </div>
+    </section>
+
+</body>
+</html>
